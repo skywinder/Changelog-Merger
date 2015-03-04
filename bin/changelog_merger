@@ -1,4 +1,4 @@
 #! /usr/bin/env ruby
 
 require 'changelog_merger'
-ChangelogMerger::Merger.new.say_hey
+ChangelogMerger::Merger.new.run_generator

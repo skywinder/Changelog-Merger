@@ -6,8 +6,8 @@ module ChangelogMerger
     def initialize
     end
 
-    def say_hey
-      puts 'hey'
+    def run_generator
+      puts `github_changelog_generator`
     end
   end
 end
