@@ -4,7 +4,6 @@ module ChangelogMerger
   # Your code goes here...
   class Merger
     def initialize
-      puts 'init'
     end
 
     def say_hey

@@ -14,10 +14,10 @@ Gem::Specification.new do |spec|
     spec.metadata['allowed_push_host'] = ''
   end
 
-  spec.summary       = %q{}
-  spec.description   = %q{}
-  spec.homepage      = ""
-  spec.license       = "MIT"
+  spec.summary       = %q{Script to merge change logs to github repo}
+  spec.description   = %q{Script to merge change logs to github repo}
+  spec.homepage      = 'https://github.com/skywinder/ChangelogMerger'
+  spec.license       = 'MIT'
 
   spec.files         = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }
   spec.executables   = spec.files.grep(%r{^bin/}) { |f| File.basename(f) }
