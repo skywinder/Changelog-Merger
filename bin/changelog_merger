@@ -1,0 +1,4 @@
+#! /usr/bin/env ruby
+
+require 'changelog_merger'
+ChangelogMerger::Merger.new.say_hey
