@@ -1,4 +1,4 @@
-require "ChangelogMerger/version"
+require "changelog_merger/version"
 
 module ChangelogMerger
   # Your code goes here...
