@@ -4,13 +4,14 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'ChangelogMerger/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "ChangelogMerger"
+  spec.name          = 'changelog_merger'
+  spec.default_executable = 'changelog_merger'
   spec.version       = ChangelogMerger::VERSION
-  spec.authors       = ["Petr Korolev"]
-  spec.email         = ["sky4winder@gmail.com"]
+  spec.authors       = ['Petr Korolev']
+  spec.email         = ['sky4winder@gmail.com']
 
   if spec.respond_to?(:metadata)
-    spec.metadata['allowed_push_host'] = ""
+    spec.metadata['allowed_push_host'] = ''
   end
 
   spec.summary       = %q{}
