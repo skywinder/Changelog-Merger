@@ -10,10 +10,6 @@ Gem::Specification.new do |spec|
   spec.authors       = ['Petr Korolev']
   spec.email         = ['sky4winder@gmail.com']
 
-  if spec.respond_to?(:metadata)
-    spec.metadata['allowed_push_host'] = ''
-  end
-
   spec.summary       = %q{Script to merge change logs to github repo}
   spec.description   = %q{Script to merge change logs to github repo}
   spec.homepage      = 'https://github.com/skywinder/ChangelogMerger'
