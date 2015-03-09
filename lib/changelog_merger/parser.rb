@@ -41,6 +41,11 @@ module ChangelogMerger
         end
       }
 
+      if ARGV.count == 1
+        options[:repo] = ARGV[0]
+      end
+
+
       begin
         parser.parse!
 
