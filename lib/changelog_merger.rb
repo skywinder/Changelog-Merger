@@ -19,7 +19,7 @@ module ChangelogMerger
 
     def add_commit_push
       execute_line('hub fork')
-      execute_line("git checkout -b add-change-log-file -o #{@options[:output]}")
+      execute_line('git checkout -b add-change-log-file')
       execute_line("git add #{@options[:output]}")
       execute_line("git commit -v -m '#{@options[:message]}'")
       execute_line('git push skywinder')
@@ -28,7 +28,7 @@ module ChangelogMerger
     end
 
     def generate_change_log
-      execute_line("github_changelog_generator #{@options[:repo]}")
+      execute_line("github_changelog_generator #{@options[:repo]} -o #{@options[:output]}")
     end
 
     def clone_repo_and_cd
