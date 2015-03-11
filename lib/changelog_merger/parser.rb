@@ -9,13 +9,17 @@ module ChangelogMerger
       # :include_labels => %w(bug enhancement),
 
       options = {:message => 'Added automatically generated change log file',
+                :output => 'CHANGELOG.md'
                  # :dry_run => true
       }
 
       parser = OptionParser.new { |opts|
         opts.banner = 'Usage: changelog_merger [options]'
-        opts.on('-r', '--repo REPO', 'destination repo in format user/repo') do |last|
+        opts.on('-r', '--repo [REPO]', 'destination repo in format user/repo') do |last|
           options[:repo] = last
+        end
+        opts.on('-o', '--output [NAME]', 'Output file. Default is CHANGELOG.md') do |last|
+          options[:output] = last
         end
         opts.on('-t', '--token [TOKEN]', 'To make more than 50 requests per hour your GitHub token required. You can generate it here: https://github.com/settings/tokens/new') do |last|
           options[:token] = last
