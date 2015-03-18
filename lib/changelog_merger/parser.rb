@@ -97,18 +97,20 @@ And now you don't need to spend a lot of :hourglass_flowing_sand: for filling it
 Some essential features of **github_changelog_generator**:
 
 - Generate **neat** Change Log file according basic [change log guidelines](http://keepachangelog.com). :gem:
-- **Distinguish** issues and split according labels:
-    - Merged pull-requests (all `merged` pull-requests)
-    - Bug-fixes (by label `bug` in issue)
+
+- **Distinguish** issues **according labels**:
+    - Merged pull requests (all `merged` pull-requests)
+    - Bug fixes (by label `bug` in issue)
     - Enhancements (by label `enhancement` in issue)
-    - 	Issues (closed issues w/o any labels)
+    - 	Issues (closed issues `w/o any labels`)
+
 -  it **exclude** not-related to changelog issues (any issue, that has label `question` `duplicate` `invalid` `wontfix` )  :scissors:
 
 - You can set which labels should be included/excluded and apply a lot of other customisations, to fit changelog for your personal style :tophat: (*look `github_changelog_generator --help`  for details)*
 
 You can easily update this file in future by simply run script: `github_changelog_generator #{options[:repo]}` in your repo folder and it make your Change Log file up-to-date again!
 
-So, since now you don't have to fill your CHANGELOG.md manually: just run script, relax and take a cup of :coffee: before your next release!
+Since now you don't have to fill your `CHANGELOG.md` manually: just run script, relax and take a cup of :coffee: before your next release!
 
 Hope you find this commit as useful. :wink:"
 
