@@ -89,8 +89,9 @@ And special for such cases - I created a [github_changelog_generator](https://gi
 
 By using this script your Change Log will look like this: [Click me!](https://github.com/skywinder/#{options[:project]}/blob/add-change-log-file/#{options[:output]})
 
-***What’s the point of a change log?***
+> ***What’s the point of a change log?***
 To make it easier for users and contributors to see precisely what notable changes have been made between each release (or version) of the project.
+> :copyright: *[http://keepachangelog.com](http://keepachangelog.com/)*
 
 And now you don't need to spend a lot of :hourglass_flowing_sand: for filling it manually!
 

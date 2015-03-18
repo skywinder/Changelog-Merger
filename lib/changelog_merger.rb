@@ -17,8 +17,23 @@ module ChangelogMerger
       else
         go_to_work_dir
         clone_repo_and_cd
+        check_existing_changelog_file
         generate_change_log
         add_commit_push
+      end
+    end
+
+    def check_existing_changelog_file
+      if @options[:output] == 'CHANGELOG.md'
+        if File.exist? @options[:output]
+
+          puts "#{@options[:output]} found"
+
+          extension = File.extname(@options[:output])
+          base = File.basename(@options[:output], extension)
+          @options[:output] = base + '_AUTO' + extension
+          puts "Change it to: #{@options[:output]}"
+        end
       end
     end
 
