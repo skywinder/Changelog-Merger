@@ -81,39 +81,7 @@ module ChangelogMerger
         exit
       end
 
-      options[:pr_message] =  "Add automatically generated change log file.
 
-Hi, as I can see, you are carefully fill tags and labels for issues in your repo.
-
-And special for such cases - I created a [github_changelog_generator](https://github.com/skywinder/github-changelog-generator), that generate change log file based on **tags**, **issues** and merged **pull requests** (and split them to separate lists according labels) from :octocat: GitHub Issue Tracker.
-
-By using this script your Change Log will look like this: [Click me!](https://github.com/skywinder/#{options[:project]}/blob/add-change-log-file/#{options[:output]})
-
-\> ***What’s the point of a change log?***
-To make it easier for users and contributors to see precisely what notable changes have been made between each release (or version) of the project.
-\> :copyright: *[http://keepachangelog.com](http://keepachangelog.com/)*
-
-And now you do not need to spend a lot of :hourglass_flowing_sand: for filling it manually!
-
-Some essential features of **github_changelog_generator**:
-
-- Generate **neat** Change Log file according basic [change log guidelines](http://keepachangelog.com). :gem:
-
-- **Distinguish** issues **according labels**:
-    - Merged pull requests (all \`merged\` pull-requests)
-    - Bug fixes (by label \`bug\` in issue)
-    - Enhancements (by label \`enhancement\` in issue)
-    -   Issues (closed issues \`w/o any labels\`)
-
--  it **exclude** not-related to changelog issues (any issue, that has label \`question\` \`duplicate\` \`invalid\` \`wontfix\` )  :scissors:
-
-- You can set which labels should be included/excluded and apply a lot of other customisations, to fit changelog for your personal style :tophat: (*look \`github_changelog_generator --help\`  for details)*
-
-You can easily update this file in future by simply run script: \`github_changelog_generator #{options[:repo]}\` in your repo folder and it make your Change Log file up-to-date again!
-
-Since now you do not have to fill your \`CHANGELOG.md\` manually: just run script, relax and take a cup of :coffee: before your next release!
-
-Hope you find this commit as useful. :wink:"
 
       if options[:verbose]
         puts 'Performing task with options:'
