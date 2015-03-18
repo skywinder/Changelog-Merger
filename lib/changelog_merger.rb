@@ -11,10 +11,15 @@ module ChangelogMerger
     end
 
     def run_generator
-      go_to_work_dir
-      clone_repo_and_cd
-      generate_change_log
-      add_commit_push
+      if @options[:run_wo_pr]
+        generate_change_log
+        execute_line("open #{@options[:output]}")
+      else
+        go_to_work_dir
+        clone_repo_and_cd
+        generate_change_log
+        add_commit_push
+      end
     end
 
     def add_commit_push

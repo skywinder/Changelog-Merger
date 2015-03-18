@@ -18,6 +18,12 @@ module ChangelogMerger
         opts.on('-r', '--repo [REPO]', 'destination repo in format user/repo') do |last|
           options[:repo] = last
         end
+        opts.on('-d', '--dry-run', 'dry run') do |last|
+          options[:dry_run] = last
+        end
+        opts.on('-x', 'just generate log and open it') do |last|
+          options[:run_wo_pr] = last
+        end
         opts.on('-o', '--output [NAME]', 'Output file. Default is CHANGELOG.md') do |last|
           options[:output] = last
         end
@@ -45,13 +51,12 @@ module ChangelogMerger
         end
       }
 
-      if ARGV.count == 1
-        options[:repo] = ARGV[0]
-      end
-
-
       begin
         parser.parse!
+
+        if ARGV.count == 1
+          options[:repo] = ARGV[0]
+        end
 
         mandatory = [:repo] # Enforce the presence of
         missing = mandatory.select { |param| options[param].nil? } # the -t and -f switches
