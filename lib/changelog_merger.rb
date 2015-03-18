@@ -66,7 +66,7 @@ module ChangelogMerger
         return nil
       end
       puts line
-      value = %x[#{line}]
+      value = %x(#{line})
       puts value
       check_exit_status(value)
       value
