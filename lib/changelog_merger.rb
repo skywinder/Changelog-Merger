@@ -27,14 +27,17 @@ module ChangelogMerger
     def check_existing_changelog_file
       if @options[:output] == 'CHANGELOG.md'
         if File.exist? @options[:output]
-
           puts "#{@options[:output]} found"
-          @options[:chagelog_exists] = true
+          @options[:chagelog_exists] = 'CHANGELOG.md'
           extension = File.extname(@options[:output])
           base = File.basename(@options[:output], extension)
           @options[:output] = base + '_AUTO' + extension
           puts "Change it to: #{@options[:output]}"
         end
+      end
+
+      if File.exist? 'HISTORY.md'
+        @options[:chagelog_exists] = 'HISTORY.md'
       end
     end
 
@@ -62,11 +65,11 @@ You can easily update this file in future by simply run script: `github_changelo
 
 Hope you find this commit as useful. :wink:"
 
-      if @options[:chagelog_exists]
-        @options[:pr_message] += '
+      unless @options[:chagelog_exists].nil?
+        @options[:pr_message] += "
 
 P.S.
-I know that you already has `CHANGELOG.md` file but give them a chance and compare quality of automatically generated change log. Hope, you will love it! :blush:'
+I know that you already has #{@options[:chagelog_exists]} file but give this script a chance and compare it with yours change log. Hope, you will love it! :blush:"
       end
     end
 
