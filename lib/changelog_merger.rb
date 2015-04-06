@@ -45,7 +45,7 @@ module ChangelogMerger
     end
 
     def generate_pr_message
-      @options[:pr_message] = "Add automatically generated change log file.
+      @options[:pr_message] = "Add change log file.
 
 Hi, as I can see, you are carefully fill tags and labels for issues in your repo.
 
