@@ -24,6 +24,6 @@ Gem::Specification.new do |spec|
 
   spec.add_runtime_dependency(%q<github_api>, ["~> 0.12"])
   spec.add_runtime_dependency(%q<colorize>, ["~> 0.7"])
-  spec.add_runtime_dependency "github_changelog_generator", "~> 1.3.6"
+  spec.add_runtime_dependency "github_changelog_generator", "~> 1"
   spec.add_runtime_dependency "hub", "~> 1.12.4"
 end
