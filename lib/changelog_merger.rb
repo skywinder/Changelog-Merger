@@ -47,7 +47,7 @@ module ChangelogMerger
     def generate_pr_message
       @options[:pr_message] = "Add change log file.
 
-Hi, as I can see, you are carefully fill tags and labels for issues in your repo.
+Hi, as I can see, you carefully fill tags and labels for issues in your repo.
 
 For such cases I create a [github_changelog_generator](https://github.com/skywinder/github-changelog-generator), that generate change log file based on **tags**, **issues** and merged **pull requests** from :octocat: Issue Tracker.
 
@@ -64,7 +64,7 @@ Some essential features, that has this script:
     -   Issues (closed issues \`w/o any labels\`)
 - Generate neat Change Log file according basic [change log guidelines](http://keepachangelog.com).
 
-You can easily update this file in future by simply run script: \`github_changelog_generator #{@options[:repo]}\` in your repo folder and it make your Change Log file up-to-date again!
+You can quickly update this file in future by the simple run script: \`github_changelog_generator #{@options[:repo]}\` in your repo folder and it makes your Change Log file up-to-date again!
 
 Hope you find this commit as useful. :wink:"
 
